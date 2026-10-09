@@ -3,4 +3,20 @@
     <string name="resultat">Resultat</string>
     <string name="_0">0</string>
     <string name="recalcular">Recalcular</string>
+    <string name="home">Home</string>
+    <string name="iconahome">IconaHome</string>
+    <string name="iconadona">IconaDona</string>
+    <string name="dona">Dona</string>
+    <string name="alcada">Alçada</string>
+    <string name="polzades">polzades</string>
+    <string name="_0t">0</string>
+    <string name="_0t1">0</string>
+    <string name="edat">Edat</string>
+    <string name="_0t2">0</string>
+    <string name="calcular">Calcular</string>
+    <string name="pes">Pes</string>
+    <string name="afegir_edat">Afegir edat</string>
+    <string name="afegir_pes">Afegir pes</string>
+    <string name="treure_pes">Treure pes</string>
+    <string name="treure_edat">Treure edat</string>
 </resources>

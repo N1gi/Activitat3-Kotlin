@@ -20,16 +20,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            tools:ignore="UseCompoundDrawables">
             <ImageView
                 android:layout_width="96dp"
                 android:layout_height="96dp"
+                android:contentDescription="@string/iconahome"
                 android:src="@drawable/baseline_male_24"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Home"
+                android:text="@string/home"
                 android:textStyle="bold"
                 android:textSize="24sp"/>
         </LinearLayout>
@@ -49,15 +51,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            tools:ignore="UseCompoundDrawables">
             <ImageView
                 android:layout_width="96dp"
                 android:layout_height="96dp"
+                android:contentDescription="@string/iconadona"
                 android:src="@drawable/baseline_female_24"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dona"
+                android:text="@string/dona"
                 android:textStyle="bold"
                 android:textSize="24sp"/>
         </LinearLayout>
@@ -77,7 +81,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alçada"
+                android:text="@string/alcada"
                 android:textSize="24sp"/>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -87,13 +91,13 @@
                     android:id="@+id/polzades"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/_0t"
                     android:textStyle="bold"
                     android:textSize="40sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="polzades"
+                    android:text="@string/polzades"
                     android:textSize="15sp"/>
             </LinearLayout>
 
@@ -124,13 +128,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pes"
+                android:text="@string/pes"
                 android:textSize="24sp"/>
             <TextView
                 android:id="@+id/nPes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@string/_0t1"
                 android:textStyle="bold"
                 android:textSize="40sp"/>
             <LinearLayout
@@ -150,6 +154,7 @@
                     app:iconGravity="textStart"
                     app:iconPadding="0dp"
                     app:backgroundTint="?colorPrimary"
+                    android:contentDescription="@string/treure_pes"
                     app:cornerRadius="30dp"/>
 
                 <com.google.android.material.button.MaterialButton
@@ -163,6 +168,7 @@
                     app:iconGravity="textStart"
                     app:iconPadding="0dp"
                     app:backgroundTint="?colorPrimary"
+                    android:contentDescription="@string/afegir_pes"
                     app:cornerRadius="30dp"/>
             </LinearLayout>
         </LinearLayout>
@@ -189,13 +195,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edat"
+                android:text="@string/edat"
                 android:textSize="24sp"/>
             <TextView
                 android:id="@+id/nEdat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@string/_0t2"
                 android:textStyle="bold"
                 android:textSize="40sp"/>
             <LinearLayout
@@ -215,6 +221,7 @@
                     app:iconGravity="textStart"
                     app:iconPadding="0dp"
                     app:backgroundTint="?colorPrimary"
+                    android:contentDescription="@string/treure_edat"
                     app:cornerRadius="30dp"/>
 
                 <com.google.android.material.button.MaterialButton
@@ -228,6 +235,7 @@
                     app:iconGravity="textStart"
                     app:iconPadding="0dp"
                     app:backgroundTint="?colorPrimary"
+                    android:contentDescription="@string/afegir_edat"
                     app:cornerRadius="30dp"/>
             </LinearLayout>
         </LinearLayout>
@@ -250,7 +258,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calcular"
+                android:text="@string/calcular"
                 android:textStyle="bold"
                 android:textSize="24sp"
                 android:textColor="#FFF"/>
