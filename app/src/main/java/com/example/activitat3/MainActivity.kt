@@ -1,10 +1,9 @@
 package com.example.activitat3
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,8 +15,8 @@ import com.google.android.material.slider.Slider
 import androidx.core.graphics.toColorInt
 
 class MainActivity : AppCompatActivity() {
-    var home_selected: Boolean=false
-    var dona_selected: Boolean=false
+    var homeSelected: Boolean=false
+    var donaSelected: Boolean=false
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,31 +28,32 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        var card_home: MaterialCardView=findViewById<MaterialCardView>(R.id.seleccio_home)
-        val card_dona=findViewById<MaterialCardView>(R.id.seleccio_dona)
-        var slider: Slider = findViewById(R.id.slider)
-        var polzades : TextView = findViewById(R.id.polzades)
+        val cardHome: MaterialCardView=findViewById(R.id.seleccio_home)
+        val cardDona=findViewById<MaterialCardView>(R.id.seleccio_dona)
+        val slider: Slider = findViewById(R.id.slider)
+        val polzades : TextView = findViewById(R.id.polzades)
         val nPes: TextView = findViewById(R.id.nPes)
         val nEdat: TextView = findViewById(R.id.nEdat)
-        var rmvPes: MaterialButton = findViewById<MaterialButton>(R.id.menys)
-        var addPes: MaterialButton = findViewById<MaterialButton>(R.id.mes)
-        var rmvEdat: MaterialButton = findViewById<MaterialButton>(R.id.menys2)
-        var addEdat: MaterialButton = findViewById<MaterialButton>(R.id.mes2)
+        val rmvPes: MaterialButton = findViewById(R.id.menys)
+        val addPes: MaterialButton = findViewById(R.id.mes)
+        val rmvEdat: MaterialButton = findViewById(R.id.menys2)
+        val addEdat: MaterialButton = findViewById(R.id.mes2)
+        val calcular: MaterialCardView=findViewById(R.id.carcular)
 
-        card_home.setOnClickListener {
-            card_home.setCardBackgroundColor("#A770B2".toColorInt())
-            card_dona.setCardBackgroundColor(Color.TRANSPARENT)
-            home_selected=true
-            dona_selected=false
+        cardHome.setOnClickListener {
+            cardHome.setCardBackgroundColor("#A770B2".toColorInt())
+            cardDona.setCardBackgroundColor(Color.TRANSPARENT)
+            homeSelected=true
+            donaSelected=false
         }
-        card_dona.setOnClickListener {
-            card_dona.setCardBackgroundColor("#A770B2".toColorInt())
-            card_home.setCardBackgroundColor(Color.TRANSPARENT)
-            dona_selected = true
-            home_selected = false
+        cardDona.setOnClickListener {
+            cardDona.setCardBackgroundColor("#A770B2".toColorInt())
+            cardHome.setCardBackgroundColor(Color.TRANSPARENT)
+            donaSelected = true
+            homeSelected = false
         }
 
-        slider.addOnChangeListener { slider, value, fromUser ->
+        slider.addOnChangeListener { _, value, _ ->
             val num = (value * 100).toInt()
             polzades.text = num.toString()
         }
@@ -87,6 +87,16 @@ class MainActivity : AppCompatActivity() {
                 nEdat.text = (edat + 1).toString()
             }
         }
+        calcular.setOnClickListener {
+            val pes = nPes.text.toString().toDouble()
+            val alcada = polzades.text.toString().toDouble()
+            val resultat = (pes * 703) / (alcada * alcada)
+
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("resultat", resultat)
+            startActivity(intent)
+        }
+
     }
 
 }
