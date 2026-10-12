@@ -90,8 +90,12 @@ class MainActivity : AppCompatActivity() {
         calcular.setOnClickListener {
             val pes = nPes.text.toString().toDouble()
             val alcada = polzades.text.toString().toDouble()
-            val resultat = (pes * 703) / (alcada * alcada)
-
+            val resultat = when {
+                alcada == 0.0 && pes == 0.0 -> 0.0
+                alcada == 0.0 -> -1.0
+                pes == 0.0 -> -2.0
+                else -> (pes * 703) / (alcada * alcada)
+            }
             val intent = Intent(this, MainActivity2::class.java)
             intent.putExtra("resultat", resultat)
             startActivity(intent)

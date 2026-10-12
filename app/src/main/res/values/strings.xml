@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Activitat3</string>
-    <string name="resultat">Resultat</string>
+    <string name="resultat">Resultats</string>
     <string name="_0">0</string>
     <string name="recalcular">Recalcular</string>
     <string name="home">Home</string>
@@ -19,7 +19,7 @@
     <string name="afegir_pes">Afegir pes</string>
     <string name="treure_pes">Treure pes</string>
     <string name="treure_edat">Treure edat</string>
-    <string name="titol">CALCULADORA BMI</string>
-    <string name="titol_resultats">Resultats BMI</string>
+    <string name="titol">CALCULADORA IMC</string>
+    <string name="titol_resultats">Resultats IMC</string>
     <string name="enrere">Enrere</string>
 </resources>
