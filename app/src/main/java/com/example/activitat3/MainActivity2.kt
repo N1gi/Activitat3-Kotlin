@@ -3,6 +3,7 @@ package com.example.activitat3
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,7 @@ class MainActivity2 : AppCompatActivity() {
         val text2: TextView=findViewById(R.id.text2)
         val num: TextView=findViewById(R.id.num)
         val recalcular : MaterialCardView=findViewById(R.id.recarcular)
+        val enrere: ImageView=findViewById(R.id.enrere)
 
         num.text = String.format("%.2f", resultat)
         when {
@@ -56,6 +58,10 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         recalcular.setOnClickListener {
+            finish()
+        }
+
+        enrere.setOnClickListener {
             finish()
         }
     }

@@ -19,4 +19,7 @@
     <string name="afegir_pes">Afegir pes</string>
     <string name="treure_pes">Treure pes</string>
     <string name="treure_edat">Treure edat</string>
+    <string name="titol">CALCULADORA BMI</string>
+    <string name="titol_resultats">Resultats BMI</string>
+    <string name="enrere">Enrere</string>
 </resources>
